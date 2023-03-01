@@ -81,7 +81,11 @@ class Client extends Oceanic.Client {
                         case Oceanic.ComponentTypes.BUTTON:
                             return console.log(`[INFO] Компонент (Кнопка) с ID "${comp.componentID}" была успешно загружена`);
 
-                        case Oceanic.ComponentTypes.CHANNEL_SELECT || Oceanic.ComponentTypes.MENTIONABLE_SELECT || Oceanic.ComponentTypes.ROLE_SELECT || Oceanic.ComponentTypes.STRING_SELECT || Oceanic.ComponentTypes.USER_SELECT:
+                        case Oceanic.ComponentTypes.STRING_SELECT:
+                        case Oceanic.ComponentTypes.ROLE_SELECT:
+                        case Oceanic.ComponentTypes.MENTIONABLE_SELECT:
+                        case Oceanic.ComponentTypes.USER_SELECT:
+                        case Oceanic.ComponentTypes.CHANNEL_SELECT:
                             return console.log(`[INFO] Компонент (selectMenu) с ID "${comp.componentID}" была успешно загружена`);
 
                         case Oceanic.ComponentTypes.TEXT_INPUT:
